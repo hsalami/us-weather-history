@@ -52,32 +52,32 @@ I loaded the data from the github repo and saved the data as a Pandas dataframe 
 I start with exploring the occurrence of unusual warm or hot days for each city. In particular, I address the following questions: how many of the very hot or unusual warm days did each city experience? how to designate these unusual days?
  
 To find these days, I compared the actual maximum, minimum and mean temperature of a given day with the average of maximum temperature on that specific day. I then computed the number of days for each city where the actual daily maximum temperature was significantly larger than the average maximum temperature. I also computed the number of days where the actual daily minimum (or mean) temperature was larger than the average one. The following bar plots summarize the obtained results:
-<img src="barplotred.png">
+<img src="figures/barplotred.png">
 The key observations are as follows:
 - The cities of Seattle, Los Angeles and Chicago had the highest number of days where the actual maximum temperature was significantly higher than the average maximum temperature. On the other hand, the cities of Houston and Jacksonville had the smallest number of these days;
 - The cities of Seattle, Chicago and New York had also more days than the other cities where the daily actual mean and minimum temperatures were greater than the average maximum temperature on those days.
 
 Now let's check if there were days where a new high temperature record was set.
-<img src="barplotrec.png">
+<img src="figures/barplotrec.png">
 Note how Seattle, Chicago, Phoenix, Charlotte, Philadelphia and Jacksonville had days where a new high temperature was reached, with Seattle having 20 of those days. Also, note that the two cities of Midwest as well as Houston did not have any of those days. Let's check further when those days (or where most of these days) occurred. The figure below shows the time series of the actual maximum temperature and indicates when the high temperature record was set.
-<img src="tsh2.png"> 
+<img src="figures/tsh2.png"> 
 Note that for Seattle many of the highest temperature days occurred in the winter, for Los Angeles three days occurred in March and one in September, for Phoenix the days were dispersed, and for Charlotte the days occurred in June.
 
 # Some Unusual Cold Days
 
 Now I focus on the colder days of each city. Again, I address the following question: how many of the unusual cold days did each city experience? To find these days, I compared the actual maximum, minimum and mean temperature of a given day with the average of minimum temperature on that specific day. I then computed the number of days for each city where the actual daily minimum temperature was significantly less than the average minimum temperature. I also computed the number of days where the actual daily maximum (or mean) temperature was less than the average minimum temperature. The following bar plots summarize the obtained results:
 
-<img src='barplotblue.png'>
+<img src='figures/barplotblue.png'>
 
 Note how now the cities of the Midwest (Chicago, Indianapolis) and the cities of the North East (New York and Philadelphia) have now the highest number of 'colder than usual' days. Note also how the cities of the West (Los Angeles, Seattle, Phoenix) had the smallest number of those days, suggesting that the year of 2014-2015 was a warm year for the cities in the West.   
 
 Let's now check for each city if there were any days where a new minimum temperature record was set.
 
-<img src="barplotrec2.png">
+<img src="figures/barplotrec2.png">
 
 Note that all cities except the cities of the West had at least one day where a new minimum temperature was reached. Charlotte, Jacksonville and Chicago had the highest number of these days. Let's check when these minimum values of temperature were recorded.
 
-<img src="tsr2.png">
+<img src="figures/tsr2.png">
 
 Note that most of the days where a new low temperature record was set occurred in November or February.
 
@@ -85,7 +85,7 @@ Note that most of the days where a new low temperature record was set occurred i
 
 I explored so far the daily minimum and maximum temperature. I now focus on the average temperature reached per meteorological season. The meteorological seasons are defined as follows: winter (12, 1, 2), spring (3, 4,  5), summer (6, 7, 8), and fall (9, 10, 11). Now, I group the actual minimum temperature, actual maximum temperature, average minimum temperature and average maximum temperature per season and compute their mean values per season for each city. The following point plots summarizes the obtained results.
 
-<img src="catplot.png">
+<img src="figures/catplot.png">
 
 The key observations are as follows:
 - West Cities (Seattle, Los Angeles, Phoenix): during the seasons of winter, fall and spring (and summer for Seattle), the actual minimum temperatures and maximum temperatures were higher on average from the average values recorded from 1880. As already observed, 2014-2015 was a warm year for these cities.
@@ -96,10 +96,10 @@ The key observations are as follows:
 # Longest Period of Consecutive Warm (Cold) Days
 
 Finally, the last aspect that I'd like to examine is that when a city experiences some unusual temperature, how long does this period last? One way to check this aspect, is to find the largest number of consecutive days where the actual mean temperature was higher than usual (average maximum temperature) or lower than usual for each city. The following bar plots summarize the results:
-<img src="consh.png">
+<img src="figures/consh.png">
 Note how Seattle, Chicago, Los Angeles, New York and Indianapolis experienced more than 6 consecutive warmer days.
 
-<img src="consm.png">
+<img src="figures/consm.png">
 Note how Chicago, Indianapolis, New York and Philadelphia experienced more than 8 consecutive colder days.
 
 # Conclusion
